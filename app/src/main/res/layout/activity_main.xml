@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main"
+    tools:ignore="ExtraText">
+
+    <!-- App Title (Centered Properly) -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the Sharma Newsletter Subscription"
+        android:textSize="28sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="#AAFFFFFF"
+        tools:ignore="MissingConstraints" /> <!-- Semi-transparent background for visibility -->
+    android:padding="12dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintVertical_bias="0.3" /> <!-- Moves title to the middle of the screen -->
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subscribe to our newsletter to receive the latest updates!"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:background="#AAFFFFFF"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Start Subscription Button -->
+    <Button
+        android:id="@+id/startSubscriptionButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Start Subscription"
+        android:textColor="#ffffff"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:backgroundTint="#FF5722"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/welcomeMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="32dp" />
+
+    <!-- Fragment container -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/startSubscriptionButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
