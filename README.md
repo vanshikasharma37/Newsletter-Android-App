@@ -34,7 +34,7 @@ This project is an Android application built using Kotlin and XML with Constrain
 ## Installation & Setup
 1. Clone the repository:
    ```sh
-   git clone <repository-url>
+   git clone <https://github.com/vanshikasharma37/Newsletter-Android-App.git>
    ```
 2. Open the project in Android Studio.
 3. Build and run the application on an emulator or physical device.
